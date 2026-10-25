@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faheem Motors - Explore cars, prices and test drive inquiries in Pakistan.">
+    <title>Faheem Motors | Premium Cars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#home" class="logo" data-page="home">FAHEEM <span>MOTORS.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+    <nav id="navMenu">
+        <a href="#home" data-page="home" class="nav-link active">Home</a>
+        <a href="#about" data-page="about" class="nav-link">About</a>
+        <a href="#car" data-page="car" class="nav-link">Cars</a>
+        <a href="#contact" data-page="contact" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="#car" data-page="car" class="nav-cta">Explore Cars ↗</a>
+</header>
+
+<main>
+
+    <!-- HOME PAGE: ALL HOME SECTIONS ARE HERE -->
+    <div class="page active-page" id="home">
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">WELCOME TO FAHEEM MOTORS</p>
+                <h1>Find Your<br><span>Dream Car.</span></h1>
+                <p class="hero-text">
+                    Discover your next car with a simple browsing experience,
+                    clear prices and friendly service in Pakistan.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#car" data-page="car" class="btn btn-primary">Explore Cars ↗</a>
+                    <a href="#about" data-page="about" class="btn btn-outline">About Us</a>
+                </div>
+                <div class="hero-stats">
+                    <div><strong>09+</strong><small>Featured Cars</small></div>
+                    <div><strong>24/7</strong><small>Online Inquiries</small></div>
+                    <div><strong>PK</strong><small>Pakistan</small></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section intro-section">
+            <p class="eyebrow">WHY FAHEEM MOTORS</p>
+            <h2>A Better Way to <span>Find Your Car.</span></h2>
+            <p class="section-description">
+                Browse our collection, compare listed prices and contact us
+                about the vehicle you are interested in.
+            </p>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">✦</div>
+                    <h3>Car Collection</h3>
+                    <p>Explore sedans, SUVs, hatchbacks and luxury cars.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Helpful Service</h3>
+                    <p>Ask questions and request further vehicle information.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">↗</div>
+                    <h3>Easy Contact</h3>
+                    <p>Send a car inquiry or request a test drive through WhatsApp.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section featured-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">HANDPICKED COLLECTION</p>
+                    <h2>Featured <span>Cars.</span></h2>
+                </div>
+                <a href="#car" data-page="car" class="text-link">View All Cars ↗</a>
+            </div>
+            <div id="homeCars" class="car-grid"></div>
+        </section>
+
+        <section class="home-cta">
+            <p class="eyebrow">YOUR NEXT JOURNEY STARTS HERE</p>
+            <h2>Ready to Find <span>Your Car?</span></h2>
+            <p>Explore the inventory or contact Faheem Motors today.</p>
+            <a href="#contact" data-page="contact" class="btn btn-primary">Contact Us ↗</a>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div>
+                    <a href="#home" data-page="home" class="logo">FAHEEM <span>MOTORS.</span></a>
+                    <p>Find your drive. Drive with confidence.</p>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:faheem1218k@gmail.com">faheem1218k@gmail.com</a>
+                    <a href="tel:+923273341233">03273341233</a>
+                </div>
+            </div>
+            <p class="copyright">© <span class="current-year"></span> Faheem Motors. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- ABOUT PAGE: ONLY ABOUT CONTENT -->
+    <div class="page" id="about">
+        <section class="page-banner">
+            <p class="eyebrow">GET TO KNOW US</p>
+            <h1>About <span>Faheem Motors.</span></h1>
+            <p>Discover our story and our commitment to customer service.</p>
+        </section>
+
+        <section class="section about-content">
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85"
+                    alt="Premium car in a showroom">
+            </div>
+            <div class="about-copy">
+                <p class="eyebrow">MEET THE FOUNDER</p>
+                <h2>I'm Faheem <span>Baloch.</span></h2>
+                <p>
+                    I am a web developer who is passionate about cars,
+                    technology and creating helpful online experiences.
+                    Faheem Motors is my car dealership website project.
+                </p>
+                <p>
+                    My goal is to make it easy for visitors to explore cars,
+                    view listed prices and contact the dealership with
+                    their questions. Customers should verify vehicle
+                    condition, ownership and documents before purchasing.
+                </p>
+                <a href="#car" data-page="car" class="btn btn-primary">Explore Our Cars ↗</a>
+            </div>
+        </section>
+
+        <section class="section testimonials">
+            <div class="center-heading">
+                <p class="eyebrow">CUSTOMER REVIEWS</p>
+                <h2>What Customers <span>Say.</span></h2>
+                <p class="section-description">
+                    These are sample testimonials for the website design.
+                    Replace them with genuine customer reviews before publishing.
+                </p>
+            </div>
+
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The website made it easy to explore different car options."</p>
+                    <div class="customer">
+                        <div class="avatar">AK</div>
+                        <div><h3>Ahmed Khan</h3><small>Sample review</small></div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"I liked the clear layout and the convenient contact options."</p>
+                    <div class="customer">
+                        <div class="avatar">SA</div>
+                        <div><h3>Saad Ali</h3><small>Sample review</small></div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"It was simple to browse cars and ask for more information."</p>
+                    <div class="customer">
+                        <div class="avatar">UM</div>
+                        <div><h3>Usman Malik</h3><small>Sample review</small></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div>
+                    <a href="#home" data-page="home" class="logo">FAHEEM <span>MOTORS.</span></a>
+                    <p>Find your drive. Drive with confidence.</p>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:faheem1218k@gmail.com">faheem1218k@gmail.com</a>
+                    <a href="tel:+923273341233">03273341233</a>
+                </div>
+            </div>
+            <p class="copyright">© <span class="current-year"></span> Faheem Motors. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- CARS PAGE: ALL 9 CARS -->
+    <div class="page" id="car">
+        <section class="page-banner">
+            <p class="eyebrow">EXPLORE OUR INVENTORY</p>
+            <h1>Find Your <span>Perfect Car.</span></h1>
+            <p>Browse our collection and ask about availability.</p>
+        </section>
+
+        <section class="section inventory-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OUR COLLECTION</p>
+                    <h2>Available <span>Cars.</span></h2>
+                </div>
+                <p id="carCount" class="car-count">9 cars</p>
+            </div>
+
+            <div class="filter-bar">
+                <input type="search" id="searchInput" placeholder="Search car name..." aria-label="Search cars">
+                <select id="priceFilter" aria-label="Filter cars by price">
+                    <option value="all">All Prices</option>
+                    <option value="under50">Under 50 Lakh</option>
+                    <option value="50to100">50–100 Lakh</option>
+                    <option value="over100">Over 1 Crore</option>
+                </select>
+            </div>
+
+            <div id="carGrid" class="car-grid"></div>
+            <p id="noCars" class="no-cars" hidden>No matching cars found. Try another search.</p>
+
+            <div class="order-area">
+                <h3>Interested in buying a car?</h3>
+                <p>Contact us to ask about price, availability or a test drive.</p>
+                <button type="button" id="orderNow" class="btn btn-primary">Order Now ↗</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div>
+                    <a href="#home" data-page="home" class="logo">FAHEEM <span>MOTORS.</span></a>
+                    <p>Find your drive. Drive with confidence.</p>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:faheem1218k@gmail.com">faheem1218k@gmail.com</a>
+                    <a href="tel:+923273341233">03273341233</a>
+                </div>
+            </div>
+            <p class="copyright">© <span class="current-year"></span> Faheem Motors. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div class="page" id="contact">
+        <section class="page-banner">
+            <p class="eyebrow">WE ARE HERE TO HELP</p>
+            <h1>Let's <span>Talk Cars.</span></h1>
+            <p>Send us your inquiry or request a test drive.</p>
+        </section>
+
+        <section class="section contact-layout">
+            <div class="contact-info">
+                <p class="eyebrow">CONTACT DETAILS</p>
+                <h2>Get In <span>Touch.</span></h2>
+                <p>We welcome questions about car details and availability.</p>
+
+                <div class="contact-item">
+                    <div class="feature-icon">☎</div>
+                    <div>
+                        <h3>Mobile Number</h3>
+                        <a href="tel:+923273341233">03273341233</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="feature-icon">✉</div>
+                    <div>
+                        <h3>Email Address</h3>
+                        <a href="mailto:faheem1218k@gmail.com">faheem1218k@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="feature-icon">⌖</div>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Karachi, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <h2>Send an <span>Inquiry.</span></h2>
+
+                <label for="customerName">Your Name *</label>
+                <input id="customerName" name="name" type="text" required placeholder="Enter your name">
+
+                <label for="customerEmail">Your Email *</label>
+                <input id="customerEmail" name="email" type="email" required placeholder="Enter your email">
+
+                <label for="customerPhone">Your Phone *</label>
+                <input id="customerPhone" name="phone" type="tel" required placeholder="Enter your phone number">
+
+                <label for="interestedCar">Interested Car *</label>
+                <select id="interestedCar" name="car" required>
+                    <option value="">Select a car</option>
+                </select>
+
+                <label for="inquiryType">Inquiry Type *</label>
+                <select id="inquiryType" name="inquiry" required>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Price Inquiry">Price Inquiry</option>
+                    <option value="Test Drive">Book a Test Drive</option>
+                </select>
+
+                <label for="customerMessage">Message</label>
+                <textarea id="customerMessage" name="message" rows="4" placeholder="Write your message..."></textarea>
+
+                <button type="submit" class="btn btn-primary">Send Inquiry ↗</button>
+                <p class="form-note">Your inquiry will be prepared in WhatsApp. No database is connected.</p>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div>
+                    <a href="#home" data-page="home" class="logo">FAHEEM <span>MOTORS.</span></a>
+                    <p>Find your drive. Drive with confidence.</p>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:faheem1218k@gmail.com">faheem1218k@gmail.com</a>
+                    <a href="tel:+923273341233">03273341233</a>
+                </div>
+            </div>
+            <p class="copyright">© <span class="current-year"></span> Faheem Motors. All rights reserved.</p>
+        </footer>
+    </div>
+
+</main>
+
+<!-- CAR DETAILS POPUP -->
+<div id="carModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+        <button type="button" id="closeModal" class="modal-close" aria-label="Close">×</button>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
