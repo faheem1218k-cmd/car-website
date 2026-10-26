@@ -1,562 +1,189 @@
-
-"use strict";
-
-/* =====================================
-   FAHEEM MOTORS - SETTINGS
-===================================== */
-
-const DEALER = {
-    name: "Faheem Motors",
-    phoneDisplay: "03273341233",
-    phoneLink: "923273341233",
-    email: "faheem1218k@gmail.com"
-};
-
-// Car data: array of objects.
+// Cars data - using array of objects as per JS knowledge
 const cars = [
     {
-        id: 1,
         name: "Toyota Corolla",
-        price: 3850000,
-        year: 2022,
-        transmission: "Automatic",
-        fuel: "Petrol",
-        category: "Sedan",
-        image: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=900&q=85",
-        description: "A practical sedan for everyday driving and family journeys."
+        price: "PKR 4,500,000",
+        image: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        phone: "03273341233"
     },
     {
-        id: 2,
         name: "Honda Civic",
-        price: 8650000,
-        year: 2023,
-        transmission: "Automatic",
-        fuel: "Petrol",
-        category: "Sedan",
-        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=85",
-        description: "A stylish sedan with a sporty design and comfortable interior."
+        price: "PKR 6,200,000",
+        image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        phone: "03273341233"
     },
     {
-        id: 3,
-        name: "Suzuki Swift",
-        price: 3400000,
-        year: 2022,
-        transmission: "Automatic",
-        fuel: "Petrol",
-        category: "Hatchback",
-        image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=85",
-        description: "A compact car suitable for everyday city driving."
+        name: "Suzuki Alto",
+        price: "PKR 2,800,000",
+        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        phone: "03273341233"
     },
     {
-        id: 4,
         name: "Toyota Fortuner",
-        price: 14500000,
-        year: 2023,
-        transmission: "Automatic",
-        fuel: "Diesel",
-        category: "SUV",
-        image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=85",
-        description: "A spacious SUV for family trips and longer journeys."
+        price: "PKR 12,000,000",
+        image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        phone: "03273341233"
     },
     {
-        id: 5,
+        name: "Honda City",
+        price: "PKR 4,800,000",
+        image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        phone: "03273341233"
+    },
+    {
         name: "Kia Sportage",
-        price: 9200000,
-        year: 2023,
-        transmission: "Automatic",
-        fuel: "Petrol",
-        category: "SUV",
-        image: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=85",
-        description: "A modern SUV with a practical design and comfortable cabin."
+        price: "PKR 8,500,000",
+        image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        phone: "03273341233"
     },
     {
-        id: 6,
         name: "Hyundai Tucson",
-        price: 8900000,
-        year: 2022,
-        transmission: "Automatic",
-        fuel: "Petrol",
-        category: "SUV",
-        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&q=85",
-        description: "A versatile SUV for daily commutes and family travel."
+        price: "PKR 9,200,000",
+        image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        phone: "03273341233"
     },
     {
-        id: 7,
-        name: "Mercedes-Benz C-Class",
-        price: 18500000,
-        year: 2022,
-        transmission: "Automatic",
-        fuel: "Petrol",
-        category: "Luxury",
-        image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=85",
-        description: "A premium sedan with refined styling and a luxury-focused cabin."
+        name: "Toyota Hilux",
+        price: "PKR 7,500,000",
+        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        phone: "03273341233"
     },
     {
-        id: 8,
-        name: "BMW 5 Series",
-        price: 22500000,
-        year: 2023,
-        transmission: "Automatic",
-        fuel: "Petrol",
-        category: "Luxury",
-        image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=85",
-        description: "An executive sedan with sophisticated styling."
-    },
-    {
-        id: 9,
-        name: "Porsche 911",
-        price: 45000000,
-        year: 2023,
-        transmission: "Automatic",
-        fuel: "Petrol",
-        category: "Sports",
-        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=85",
-        description: "A sports car with an iconic design and performance-focused engineering."
+        name: "BMW 3 Series",
+        price: "PKR 15,000,000",
+        image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        phone: "03273341233"
     }
 ];
 
+// DOM Elements
+const carsGrid = document.getElementById('cars-grid');
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+const orderNowBtn = document.getElementById('orderNowBtn');
+const contactForm = document.getElementById('contactForm');
 
-/* =====================================
-   1. HELPER FUNCTIONS
-===================================== */
-
-function getElement(id) {
-    return document.getElementById(id);
-}
-
-function formatPrice(price) {
-    return "PKR " + price.toLocaleString("en-PK");
-}
-
-let toastTimer;
-
-function showToast(message) {
-    const toast = getElement("toast");
-
-    toast.textContent = message;
-    toast.classList.add("show");
-
-    clearTimeout(toastTimer);
-
-    toastTimer = setTimeout(function () {
-        toast.classList.remove("show");
-    }, 2800);
-}
-
-
-/* =====================================
-   2. PAGE NAVIGATION
-===================================== */
-
-function showPage(pageName, updateHistory = true) {
-    const validPages = ["home", "about", "car", "contact"];
-
-    // if/else condition
-    if (!validPages.includes(pageName)) {
-        pageName = "home";
-    }
-
-    // Hide every page first.
-    document.querySelectorAll(".page").forEach(function (page) {
-        page.classList.remove("active-page");
-    });
-
-    // Show only the selected page.
-    getElement(pageName).classList.add("active-page");
-
-    // Highlight the correct navigation link.
-    document.querySelectorAll(".nav-link").forEach(function (link) {
-        link.classList.toggle(
-            "active",
-            link.dataset.page === pageName
-        );
-    });
-
-    // Close the mobile menu.
-    getElement("navMenu").classList.remove("open");
-    getElement("menuToggle").textContent = "☰";
-
-    // Update the browser URL.
-    if (updateHistory && window.location.hash !== "#" + pageName) {
-        history.pushState(null, "", "#" + pageName);
-    }
-
-    // Start the selected page at its top.
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+// Function to create car cards using loops and DOM manipulation
+function displayCars() {
+    // Clear existing
+    carsGrid.innerHTML = '';
+    
+    // Loop through cars array
+    cars.forEach(car => {
+        // Create elements
+        const card = document.createElement('div');
+        card.className = 'car-card';
+        
+        const img = document.createElement('img');
+        img.src = car.image;
+        img.alt = car.name;
+        
+        const info = document.createElement('div');
+        info.className = 'car-info';
+        
+        const name = document.createElement('h3');
+        name.className = 'car-name';
+        name.textContent = car.name;
+        
+        const price = document.createElement('p');
+        price.className = 'car-price';
+        price.textContent = car.price;
+        
+        const phone = document.createElement('p');
+        phone.className = 'car-phone';
+        phone.textContent = car.phone;
+        
+        // Append children
+        info.appendChild(name);
+        info.appendChild(price);
+        info.appendChild(phone);
+        
+        card.appendChild(img);
+        card.appendChild(info);
+        
+        carsGrid.appendChild(card);
     });
 }
 
-// Event bubbling: one listener handles all navigation links.
-document.addEventListener("click", function (event) {
-    const link = event.target.closest("[data-page]");
-
-    if (!link) {
-        return;
-    }
-
-    event.preventDefault();
-    showPage(link.dataset.page);
+// Mobile menu toggle
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });
 
-// Browser Back and Forward buttons.
-window.addEventListener("popstate", function () {
-    const pageName = window.location.hash.slice(1) || "home";
-    showPage(pageName, false);
-});
+// Section control for page mode
+const sections = document.querySelectorAll('.section');
+const navLinkElements = document.querySelectorAll('.nav-link');
 
-
-/* =====================================
-   3. MOBILE MENU
-===================================== */
-
-getElement("menuToggle").addEventListener("click", function () {
-    const menu = getElement("navMenu");
-    const isOpen = menu.classList.toggle("open");
-
-    this.textContent = isOpen ? "✕" : "☰";
-    this.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
-    );
-});
-
-
-/* =====================================
-   4. CREATE CARDS FROM THE ARRAY
-===================================== */
-
-function createCarCard(car) {
-    return `
-        <article class="car-card">
-            <div class="car-image-wrap">
-                <img
-                    src="${car.image}"
-                    alt="${car.name}"
-                    loading="lazy"
-                >
-                <span class="car-badge">${car.category}</span>
-            </div>
-
-            <div class="car-info">
-                <h3>${car.name}</h3>
-
-                <div class="car-specs">
-                    <span>${car.year}</span>
-                    <span>${car.transmission}</span>
-                    <span>${car.fuel}</span>
-                </div>
-
-                <p class="car-price">${formatPrice(car.price)}</p>
-                <p class="car-phone">Mobile: ${DEALER.phoneDisplay}</p>
-
-                <div class="car-actions">
-                    <button
-                        type="button"
-                        class="btn btn-small btn-dark"
-                        data-action="details"
-                        data-id="${car.id}"
-                    >
-                        View Details
-                    </button>
-
-                    <button
-                        type="button"
-                        class="btn btn-small btn-primary"
-                        data-action="order"
-                        data-id="${car.id}"
-                    >
-                        Order Now
-                    </button>
-                </div>
-            </div>
-        </article>
-    `;
+function showAllSections() {
+    sections.forEach(section => {
+        section.classList.remove('hidden');
+    });
+    // Scroll to top
+    window.scrollTo(0, 0);
 }
 
-function renderCars(carList, containerId) {
-    const container = getElement(containerId);
-
-    container.innerHTML = carList.map(createCarCard).join("");
-}
-
-function showAllCars() {
-    renderCars(cars, "carGrid");
-    getElement("carCount").textContent = cars.length + " cars";
-    getElement("noCars").hidden = true;
-}
-
-function showFeaturedCars() {
-    renderCars(cars.slice(0, 3), "homeCars");
-}
-
-
-/* =====================================
-   5. SEARCH AND PRICE FILTER
-===================================== */
-
-function filterCars() {
-    const searchText = getElement("searchInput")
-        .value.trim().toLowerCase();
-
-    const priceRange = getElement("priceFilter").value;
-
-    const filteredCars = cars.filter(function (car) {
-        const matchesName = car.name
-            .toLowerCase()
-            .includes(searchText);
-
-        let matchesPrice = true;
-
-        if (priceRange === "under50") {
-            matchesPrice = car.price < 5000000;
-        } else if (priceRange === "50to100") {
-            matchesPrice =
-                car.price >= 5000000 &&
-                car.price <= 10000000;
-        } else if (priceRange === "over100") {
-            matchesPrice = car.price > 10000000;
+function showOnlySection(id) {
+    sections.forEach(section => {
+        if (section.id === id) {
+            section.classList.remove('hidden');
+        } else {
+            section.classList.add('hidden');
         }
-
-        return matchesName && matchesPrice;
     });
-
-    renderCars(filteredCars, "carGrid");
-
-    getElement("carCount").textContent =
-        filteredCars.length + " cars";
-
-    getElement("noCars").hidden = filteredCars.length > 0;
+    window.scrollTo(0, 0);
 }
 
-getElement("searchInput").addEventListener("input", filterCars);
-getElement("priceFilter").addEventListener("change", filterCars);
-
-
-/* =====================================
-   6. CAR DETAILS POPUP
-===================================== */
-
-function openCarDetails(carId) {
-    const car = cars.find(function (item) {
-        return item.id === Number(carId);
+// Handle navigation clicks
+navLinkElements.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('href').substring(1); // remove #
+        
+        if (target === 'home') {
+            showAllSections();
+        } else {
+            showOnlySection(target);
+        }
+        
+        // Close mobile menu
+        navLinks.classList.remove('active');
     });
-
-    if (!car) {
-        showToast("Car details not found.");
-        return;
-    }
-
-    getElement("modalBody").innerHTML = `
-        <img
-            class="modal-car-image"
-            src="${car.image}"
-            alt="${car.name}"
-        >
-
-        <p class="eyebrow">${car.category} · ${car.year}</p>
-        <h2>${car.name}</h2>
-
-        <h3 class="car-price">${formatPrice(car.price)}</h3>
-
-        <p><strong>Year:</strong> ${car.year}</p>
-        <p><strong>Transmission:</strong> ${car.transmission}</p>
-        <p><strong>Fuel:</strong> ${car.fuel}</p>
-        <p><strong>Category:</strong> ${car.category}</p>
-        <p>${car.description}</p>
-        <p><strong>Mobile:</strong> ${DEALER.phoneDisplay}</p>
-
-        <button
-            type="button"
-            class="btn btn-primary"
-            data-action="order"
-            data-id="${car.id}"
-        >
-            Inquire About This Car ↗
-        </button>
-    `;
-
-    getElement("carModal").classList.add("open");
-    getElement("carModal").setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-}
-
-function closeCarDetails() {
-    getElement("carModal").classList.remove("open");
-    getElement("carModal").setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-}
-
-getElement("closeModal").addEventListener("click", closeCarDetails);
-
-getElement("carModal").addEventListener("click", function (event) {
-    if (event.target === this) {
-        closeCarDetails();
-    }
 });
 
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-        closeCarDetails();
-    }
+// Also handle CTA button
+document.querySelector('.cta-button').addEventListener('click', (e) => {
+    e.preventDefault();
+    showOnlySection('cars');
 });
 
-
-/* =====================================
-   7. WHATSAPP ORDER INQUIRY
-===================================== */
-
-function sendWhatsApp(message) {
-    const url =
-        "https://wa.me/" +
-        DEALER.phoneLink +
-        "?text=" +
-        encodeURIComponent(message);
-
-    window.open(url, "_blank", "noopener,noreferrer");
-}
-
-function orderCar(carId) {
-    const car = cars.find(function (item) {
-        return item.id === Number(carId);
-    });
-
-    if (!car) {
-        showPage("contact");
-        return;
-    }
-
-    const message =
-        `Assalam-o-Alaikum ${DEALER.name}!\n\n` +
-        `I am interested in ${car.name}.\n` +
-        `Listed price: ${formatPrice(car.price)}\n` +
-        `Please confirm availability and arrange a test drive.\n\n` +
-        `Thank you.`;
-
-    sendWhatsApp(message);
-}
-
-// One delegated listener handles all car card buttons.
-document.addEventListener("click", function (event) {
-    const button = event.target.closest("[data-action]");
-
-    if (!button) {
-        return;
-    }
-
-    const action = button.dataset.action;
-    const carId = button.dataset.id;
-
-    if (action === "details") {
-        openCarDetails(carId);
-    } else if (action === "order") {
-        orderCar(carId);
-    }
+// Order Now button - simple alert using event
+orderNowBtn.addEventListener('click', () => {
+    alert('Thank you for your interest! Please contact us at 03273341233 to place your order.');
 });
 
-// Main Order Now button at the bottom of the Cars page.
-getElement("orderNow").addEventListener("click", function () {
-    showPage("contact");
-    showToast("Select a car and submit your inquiry.");
+// Contact form submission
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for your message! We will contact you soon.');
+    contactForm.reset();
 });
 
+// Smooth scroll is handled by CSS, but we can add more JS if needed
+// Using setTimeout for a welcome message example
+setTimeout(() => {
+    console.log('Welcome to Faheem Motors!');
+}, 1000);
 
-/* =====================================
-   8. CONTACT FORM AND VALIDATION
-===================================== */
+// Initialize
+displayCars();
 
-function populateCarOptions() {
-    const select = getElement("interestedCar");
-
-    select.innerHTML =
-        '<option value="">Select a car</option>' +
-        cars.map(function (car) {
-            return `
-                <option value="${car.name}">
-                    ${car.name} - ${formatPrice(car.price)}
-                </option>
-            `;
-        }).join("");
-}
-
-getElement("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const name = getElement("customerName").value.trim();
-    const email = getElement("customerEmail").value.trim();
-    const phone = getElement("customerPhone").value.trim();
-    const selectedCar = getElement("interestedCar").value;
-    const inquiry = getElement("inquiryType").value;
-    const message = getElement("customerMessage").value.trim();
-
-    // Check required fields.
-    if (!name || !email || !phone || !selectedCar) {
-        showToast("Please fill in all required fields.");
-        return;
-    }
-
-    // Check email format.
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(email)) {
-        showToast("Please enter a valid email address.");
-        return;
-    }
-
-    if (phone.replace(/\D/g, "").length < 7) {
-        showToast("Please enter a valid phone number.");
-        return;
-    }
-
-    const whatsappMessage =
-        `New inquiry for ${DEALER.name}\n\n` +
-        `Customer: ${name}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone}\n` +
-        `Car: ${selectedCar}\n` +
-        `Inquiry: ${inquiry}\n` +
-        `Message: ${message || "No additional message"}`;
-
-    sendWhatsApp(whatsappMessage);
-    showToast("Your inquiry is ready to send in WhatsApp.");
-});
-
-
-/* =====================================
-   9. FOOTER YEAR
-===================================== */
-
-function updateFooterYear() {
-    const year = new Date().getFullYear();
-
-    document.querySelectorAll(".current-year").forEach(function (element) {
-        element.textContent = year;
-    });
-}
-
-
-/* =====================================
-   10. INITIALIZE WEBSITE
-===================================== */
-
-function initWebsite() {
-    showFeaturedCars();
-    showAllCars();
-    populateCarOptions();
-    updateFooterYear();
-
-    const initialPage = window.location.hash.slice(1);
-    const validPages = ["home", "about", "car", "contact"];
-
-    if (validPages.includes(initialPage)) {
-        showPage(initialPage, false);
+// Example of using if-else for responsive check (simple)
+function checkScreen() {
+    if (window.innerWidth < 768) {
+        console.log('Mobile view');
     } else {
-        showPage("home", false);
+        console.log('Desktop view');
     }
-
-    console.log("Faheem Motors website is ready!");
 }
-
-// Run after the HTML document has loaded.
-document.addEventListener("DOMContentLoaded", initWebsite);
+checkScreen();
+window.addEventListener('resize', checkScreen);
